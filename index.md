@@ -48,5 +48,40 @@ Without the help of edit recommendation, the control group have to read the post
 For example, some latexification edits within text like replacing x-y to $x-y$ are frequently missed in the control group.
 The revision of complex latex formula such as $\langle x, x\rangle \cdot\langle y, y\rangle=|\langle x, y\rangle|^{2}+|x \times y|^{2}$ is more error-prone in control group.
 
+## Examples of math-realted edits
+#1 Missing $ inserted
+
+f(x) = ax^2 + bx + c -> $ f(x) = ax^2 + bx + c $
+
+
+2 Missing { token 
+
+$ f_{1}^{\prime}, f_{2}^{\prime: Y \rightarrow Z^{X} $ -> f_{1}^{\prime}, f_{2}^{\prime}: Y \rightarrow Z^{X}
+
+
+3 Missing ^ token 
+
+$n(t)=48 e -20.6 t$ -> $n(t)=48 e^{-20.6 t}$
+
+
+4 Mis-spelled tokens
+
+f_{1}^{\prime}, f_{2}^{\prime}: Y \rightrrow Z^{X} -> f_{1}^{\prime}, f_{2}^{\prime}: Y \rightarrow Z^{X}
+
+
+5 Converting natural language words into number
+
+six -> $ 6 $
+
+
+6 Converting natural language words into LaTeX tokens
+
+root -> \sqrt
+
+7 Wrongly used LaTeX tokens
+
+$a^{\^}=\left(\mathbf{X}^{T} \mathbf{X}\right)^{-1} \mathbf{X}^{T} \vec{y}$ -> $\widehat{a}=\left(\mathbf{X}^{T} \mathbf{X}\right)^{-1} \mathbf{X}^{T} \vec{y}$
+
+8 Transcribing screenshots into LaTeX formulas
 
 
